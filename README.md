@@ -14,3 +14,5 @@
 
 ④アプリ側でそのサーバーのURLにアクセスし、JSONを受け取る
 (AlamofireはサーバーURLにアクセスするとき、SwiftyJSONはJSONファイルを受け取った後の処理に使うと思ってる)
+
+<img src="assets/openning.png" width="300px">
