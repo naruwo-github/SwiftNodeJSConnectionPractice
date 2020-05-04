@@ -18,14 +18,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        Alamofire.request(url2)
-            .responseJSON { response in
-                guard let object = response.result.value else {
-                    return
-                }
-                let json = JSON(object)
-                //let name = json["Name"].string!
-                print(json)
+        //繰り返し処理をメインスレッドにて行う
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+            //urlからjsonを取得する
+            Alamofire.request(self.url2)
+                .responseJSON { response in
+                    guard let object = response.result.value else {
+                        return
+                    }
+                    let json = JSON(object)
+                    let platform = json["platform"].string!
+                    let nodeVersion = json["nodeVersion"].string!
+                    let uptime = json["uptime"].string!
+                    print(json)
+            }
         }
     }
 }
