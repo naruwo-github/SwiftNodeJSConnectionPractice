@@ -16,13 +16,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAA-Lb-l7d">
-                                <rect key="frame" x="120" y="423" width="174" height="50"/>
+                                <rect key="frame" x="100" y="712" width="214" height="50"/>
                                 <color key="backgroundColor" red="0.4823529412" green="0.78039215689999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="iVI-uD-MWq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Connect">
+                                <state key="normal" title="Connecting">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -34,17 +34,69 @@
                                     <action selector="connectButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="grr-3B-bdJ"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7o2-Q6-bnG">
+                                <rect key="frame" x="20" y="512" width="374" height="180"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Platform : before connecting..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y08-bt-hhc" userLabel="PlatformLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="ZEW-XD-luL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NodeVersion : before connecting..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAj-xh-JKp" userLabel="NodeVersionLabel">
+                                        <rect key="frame" x="0.0" y="60" width="374" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="d1h-oD-MqP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uptime : before connecting..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghg-OJ-Aid" userLabel="UptimeLabel">
+                                        <rect key="frame" x="0.0" y="120" width="374" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="ICJ-Dc-iWx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ghg-OJ-Aid" secondAttribute="trailing" id="9no-AR-ogB"/>
+                                    <constraint firstItem="Ghg-OJ-Aid" firstAttribute="leading" secondItem="7o2-Q6-bnG" secondAttribute="leading" id="Bmz-MX-AQq"/>
+                                    <constraint firstItem="tAj-xh-JKp" firstAttribute="leading" secondItem="7o2-Q6-bnG" secondAttribute="leading" id="FkO-eY-p0d"/>
+                                    <constraint firstAttribute="height" constant="180" id="HGb-Cg-lb8"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y08-bt-hhc" secondAttribute="trailing" id="PrI-Fq-TLc"/>
+                                    <constraint firstAttribute="trailing" secondItem="tAj-xh-JKp" secondAttribute="trailing" id="Vdv-G1-ML0"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ghg-OJ-Aid" secondAttribute="bottom" id="e8Z-q9-gc2"/>
+                                    <constraint firstItem="tAj-xh-JKp" firstAttribute="top" secondItem="Y08-bt-hhc" secondAttribute="bottom" id="eFl-xe-dbZ"/>
+                                    <constraint firstItem="Y08-bt-hhc" firstAttribute="top" secondItem="7o2-Q6-bnG" secondAttribute="top" id="xgL-Ek-lOa"/>
+                                    <constraint firstItem="Y08-bt-hhc" firstAttribute="leading" secondItem="7o2-Q6-bnG" secondAttribute="leading" id="yFH-2P-DTr"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="fAA-Lb-l7d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="j7L-vV-hbi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fAA-Lb-l7d" secondAttribute="bottom" constant="100" id="BqO-Kt-EjV"/>
+                            <constraint firstItem="fAA-Lb-l7d" firstAttribute="top" secondItem="7o2-Q6-bnG" secondAttribute="bottom" constant="20" id="YUX-7G-76a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7o2-Q6-bnG" secondAttribute="trailing" constant="20" id="hoP-Bl-inj"/>
                             <constraint firstItem="fAA-Lb-l7d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l5q-e7-WEf"/>
-                            <constraint firstItem="fAA-Lb-l7d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="pyk-6K-A0t"/>
+                            <constraint firstItem="fAA-Lb-l7d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="pyk-6K-A0t"/>
+                            <constraint firstItem="7o2-Q6-bnG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rHt-kb-H81"/>
+                            <constraint firstItem="7o2-Q6-bnG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tVS-6K-5JT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="connectButton" destination="fAA-Lb-l7d" id="g56-k6-kMy"/>
+                        <outlet property="nodeVersionLabel" destination="tAj-xh-JKp" id="dGa-pF-ojM"/>
+                        <outlet property="platformLabel" destination="Y08-bt-hhc" id="OXX-zA-9s2"/>
+                        <outlet property="uptimeLabel" destination="Ghg-OJ-Aid" id="wtm-66-NUK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

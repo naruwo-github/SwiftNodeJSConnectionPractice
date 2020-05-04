@@ -12,6 +12,9 @@ import SwiftyJSON
 
 class ViewController: UIViewController {
     @IBOutlet weak var connectButton: UIButton!
+    @IBOutlet weak var platformLabel: UILabel!
+    @IBOutlet weak var nodeVersionLabel: UILabel!
+    @IBOutlet weak var uptimeLabel: UILabel!
     
     let url = "http://localhost:7070"
     let url2 = "http://0.0.0.0:7070"
@@ -31,21 +34,42 @@ class ViewController: UIViewController {
                         return
                     }
                     let json = JSON(object)
-                    //let platform = json["platform"].string
-                    //let nodeVersion = json["nodeVersion"].string
-                    //let uptime = json["uptime"].string
-                    print(json)
+                    self.setupLabels(json: json)
             }
         }
+        //開始
+        timer.resume()
     }
     
     @IBAction func connectButtonTapped(_ sender: Any) {
-        // 開始
-        timer.resume()
-        // 一時停止
-        //timer.suspend()
-        //タイマー破棄
+        if self.connectButton.titleLabel?.text == "Connecting" {
+            self.connectButton.setTitle("Connect", for: UIControl.State.normal)
+            //一時停止
+            timer.suspend()
+        } else {
+            self.connectButton.setTitle("Connecting", for: UIControl.State.normal)
+            timer.resume()
+        }
+        //破棄
         //timer.cancel()
+    }
+    
+    func setupLabels(json: JSON) {
+        if let platform = json["platform"].string {
+            self.platformLabel.text = "Platform : " + platform
+        } else {
+            self.platformLabel.text = "Platform : " + "no response..."
+        }
+        if let nodeVersion = json["nodeVersion"].string {
+            self.nodeVersionLabel.text = "NodeVersion : " + nodeVersion
+        } else {
+            self.nodeVersionLabel.text = "Platform : " + "no response..."
+        }
+        if let uptime = json["uptime"].int {
+            self.uptimeLabel.text = "Uptime : " + String(uptime)
+        } else {
+            self.uptimeLabel.text = "Platform : " + "no response..."
+        }
     }
     
 }
