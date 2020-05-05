@@ -30,9 +30,8 @@
 ③アプリ内でサーバーと接続するボタンを押下する
 →画面が更新されていればオッケーです。
 
+### Ajaxの方
 <img src="assets/ajaxOpenning.png" width="300px"> <img src="assets/ajaxMovie.gif" width="300px">
 
-サーバーを立ち上げ、接続をするとuptimeが更新されていくのが分かります。
-uptimeはサーバーの起動時間を表すので、適切に通信ができていることが分かりますね。
-
+### Socketの方
 <img src="assets/websocketStart.gif" width="300px">
