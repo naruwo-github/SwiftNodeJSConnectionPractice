@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Ajax View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swiftNodeConnectionPractice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AjaxViewController" customModule="swiftNodeConnectionPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,16 +79,51 @@
                                     <constraint firstItem="Y08-bt-hhc" firstAttribute="leading" secondItem="7o2-Q6-bnG" secondAttribute="leading" id="yFH-2P-DTr"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajax(Server)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBx-ZM-Gii">
+                                <rect key="frame" x="150" y="432" width="114" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QX9-SZ-xgd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiM-9H-DIQ">
+                                <rect key="frame" x="100" y="782" width="214" height="50"/>
+                                <color key="backgroundColor" red="0.4823529412" green="0.78039215689999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZQy-xl-UaR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="WebSocket">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="FJr-Lu-KiM" kind="show" id="ITt-Nk-GR5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oiM-9H-DIQ" secondAttribute="bottom" constant="30" id="7M2-Zv-0yq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fAA-Lb-l7d" secondAttribute="bottom" constant="100" id="BqO-Kt-EjV"/>
                             <constraint firstItem="fAA-Lb-l7d" firstAttribute="top" secondItem="7o2-Q6-bnG" secondAttribute="bottom" constant="20" id="YUX-7G-76a"/>
+                            <constraint firstItem="7o2-Q6-bnG" firstAttribute="top" secondItem="bBx-ZM-Gii" secondAttribute="bottom" constant="30" id="go0-a2-Kuj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7o2-Q6-bnG" secondAttribute="trailing" constant="20" id="hoP-Bl-inj"/>
+                            <constraint firstItem="oiM-9H-DIQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jT6-9f-FMW"/>
+                            <constraint firstItem="oiM-9H-DIQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="kSp-Zm-zD4"/>
                             <constraint firstItem="fAA-Lb-l7d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l5q-e7-WEf"/>
+                            <constraint firstItem="bBx-ZM-Gii" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="oll-fx-UkK"/>
                             <constraint firstItem="fAA-Lb-l7d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="pyk-6K-A0t"/>
                             <constraint firstItem="7o2-Q6-bnG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rHt-kb-H81"/>
                             <constraint firstItem="7o2-Q6-bnG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tVS-6K-5JT"/>
+                            <constraint firstItem="bBx-ZM-Gii" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wl6-pj-5zw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -102,6 +137,118 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="100"/>
+        </scene>
+        <!--Web Socket View Controller-->
+        <scene sceneID="aSL-jg-X4f">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" id="FJr-Lu-KiM" customClass="WebSocketViewController" customModule="swiftNodeConnectionPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hrD-rV-yH5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WebSocket" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Red-Fb-aLn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="11n-ls-ZUJ">
+                                <rect key="frame" x="0.0" y="50" width="414" height="548"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="FJr-Lu-KiM" id="WlI-K8-ZHd"/>
+                                    <outlet property="delegate" destination="FJr-Lu-KiM" id="jEL-BD-jaW"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URJ-UJ-VGL">
+                                <rect key="frame" x="100" y="618" width="214" height="50"/>
+                                <color key="backgroundColor" red="0.4823529412" green="0.78039215689999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Xiv-l5-1GY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Tap!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapButtonPressed:" destination="FJr-Lu-KiM" eventType="touchUpInside" id="4zL-AT-cYj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpN-cj-t5b">
+                                <rect key="frame" x="100" y="688" width="214" height="50"/>
+                                <color key="backgroundColor" red="0.4823529412" green="0.78039215689999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zvO-PQ-eTn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Connect">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="connectButtonPressed:" destination="FJr-Lu-KiM" eventType="touchUpInside" id="b39-00-bJj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bb-Gg-ozQ">
+                                <rect key="frame" x="100" y="758" width="214" height="50"/>
+                                <color key="backgroundColor" red="0.4823529412" green="0.78039215689999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zFP-z1-NdZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Disconnect">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="disconnectButtonPressed:" destination="FJr-Lu-KiM" eventType="touchUpInside" id="MQY-B1-Pu3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2bb-Gg-ozQ" firstAttribute="centerX" secondItem="hrD-rV-yH5" secondAttribute="centerX" id="4Yv-28-ynK"/>
+                            <constraint firstItem="qpN-cj-t5b" firstAttribute="top" secondItem="URJ-UJ-VGL" secondAttribute="bottom" constant="20" id="5Zs-ZM-EVq"/>
+                            <constraint firstItem="qpN-cj-t5b" firstAttribute="centerX" secondItem="hrD-rV-yH5" secondAttribute="centerX" id="7Sm-GR-x1E"/>
+                            <constraint firstItem="ybY-ac-w9A" firstAttribute="trailing" secondItem="Red-Fb-aLn" secondAttribute="trailing" id="ENe-pz-Cz6"/>
+                            <constraint firstItem="ybY-ac-w9A" firstAttribute="bottom" secondItem="2bb-Gg-ozQ" secondAttribute="bottom" id="FAT-fV-xi9"/>
+                            <constraint firstItem="11n-ls-ZUJ" firstAttribute="leading" secondItem="ybY-ac-w9A" secondAttribute="leading" id="Iw0-RV-8jp"/>
+                            <constraint firstItem="qpN-cj-t5b" firstAttribute="leading" secondItem="ybY-ac-w9A" secondAttribute="leading" constant="100" id="Mf7-h0-IUH"/>
+                            <constraint firstItem="URJ-UJ-VGL" firstAttribute="centerX" secondItem="hrD-rV-yH5" secondAttribute="centerX" id="Q4H-oc-1Q6"/>
+                            <constraint firstItem="Red-Fb-aLn" firstAttribute="top" secondItem="ybY-ac-w9A" secondAttribute="top" id="QWc-5X-MJW"/>
+                            <constraint firstItem="ybY-ac-w9A" firstAttribute="trailing" secondItem="11n-ls-ZUJ" secondAttribute="trailing" id="SIT-Ly-TaE"/>
+                            <constraint firstItem="2bb-Gg-ozQ" firstAttribute="top" secondItem="qpN-cj-t5b" secondAttribute="bottom" constant="20" id="Ws5-Uf-BU0"/>
+                            <constraint firstItem="Red-Fb-aLn" firstAttribute="leading" secondItem="ybY-ac-w9A" secondAttribute="leading" id="Xgn-E1-Xe5"/>
+                            <constraint firstItem="URJ-UJ-VGL" firstAttribute="leading" secondItem="ybY-ac-w9A" secondAttribute="leading" constant="100" id="bvp-LM-igc"/>
+                            <constraint firstItem="2bb-Gg-ozQ" firstAttribute="leading" secondItem="ybY-ac-w9A" secondAttribute="leading" constant="100" id="grS-RT-kJn"/>
+                            <constraint firstItem="11n-ls-ZUJ" firstAttribute="top" secondItem="Red-Fb-aLn" secondAttribute="bottom" id="iZS-uC-hg9"/>
+                            <constraint firstItem="URJ-UJ-VGL" firstAttribute="top" secondItem="11n-ls-ZUJ" secondAttribute="bottom" constant="20" id="mhn-zg-ofn"/>
+                            <constraint firstItem="11n-ls-ZUJ" firstAttribute="top" secondItem="ybY-ac-w9A" secondAttribute="top" constant="50" id="q8N-6X-iGA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ybY-ac-w9A"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TG9-Xd-kBI"/>
+                    <connections>
+                        <outlet property="logTableView" destination="11n-ls-ZUJ" id="obi-pI-gWK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ptC-pC-2Qc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957" y="100"/>
         </scene>
     </scenes>
 </document>

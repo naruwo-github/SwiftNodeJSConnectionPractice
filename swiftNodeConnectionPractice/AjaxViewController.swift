@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class AjaxViewController: UIViewController {
     @IBOutlet weak var connectButton: UIButton!
     @IBOutlet weak var platformLabel: UILabel!
     @IBOutlet weak var nodeVersionLabel: UILabel!
@@ -39,6 +39,16 @@ class ViewController: UIViewController {
         }
         //開始
         timer.resume()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        if self.connectButton.titleLabel?.text == "Connecting" {
+            self.connectButton.setTitle("Connect", for: UIControl.State.normal)
+            //一時停止
+            timer.suspend()
+        }
     }
     
     @IBAction func connectButtonTapped(_ sender: Any) {
