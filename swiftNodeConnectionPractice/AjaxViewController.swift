@@ -38,7 +38,7 @@ class AjaxViewController: UIViewController {
             }
         }
         //開始
-        timer.resume()
+        //timer.resume()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
