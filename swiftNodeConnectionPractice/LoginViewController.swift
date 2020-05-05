@@ -10,10 +10,19 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    let userDefaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let isLoggedIn = UserDefaults.standard.bool(forKey: "loginState")
+        if isLoggedIn {
+            //ログイン済み
+            self.present(AjaxViewController(), animated: true, completion: nil)
+        } else {
+            //未登録
+        }
     }
     
 
