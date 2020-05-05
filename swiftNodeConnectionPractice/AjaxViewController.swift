@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class AjaxViewController: UIViewController {
     @IBOutlet weak var connectButton: UIButton!
     @IBOutlet weak var platformLabel: UILabel!
     @IBOutlet weak var nodeVersionLabel: UILabel!

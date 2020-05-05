@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		058758742460F524004C956E /* WebSocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058758732460F524004C956E /* WebSocketViewController.swift */; };
 		0592279B245F964800654A3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592279A245F964800654A3E /* AppDelegate.swift */; };
 		0592279D245F964800654A3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592279C245F964800654A3E /* SceneDelegate.swift */; };
-		0592279F245F964800654A3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592279E245F964800654A3E /* ViewController.swift */; };
+		0592279F245F964800654A3E /* AjaxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0592279E245F964800654A3E /* AjaxViewController.swift */; };
 		059227A2245F964800654A3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059227A0245F964800654A3E /* Main.storyboard */; };
 		059227A4245F964900654A3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059227A3245F964900654A3E /* Assets.xcassets */; };
 		059227A7245F964900654A3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059227A5245F964900654A3E /* LaunchScreen.storyboard */; };
@@ -18,10 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		058758732460F524004C956E /* WebSocketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketViewController.swift; sourceTree = "<group>"; };
 		05922797245F964800654A3E /* swiftNodeConnectionPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftNodeConnectionPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0592279A245F964800654A3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0592279C245F964800654A3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0592279E245F964800654A3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0592279E245F964800654A3E /* AjaxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjaxViewController.swift; sourceTree = "<group>"; };
 		059227A1245F964800654A3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		059227A3245F964900654A3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		059227A6245F964900654A3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,7 +49,6 @@
 		0592278E245F964800654A3E = {
 			isa = PBXGroup;
 			children = (
-				05ED382E2460EA42008F1C67 /* ServerSide */,
 				05922799245F964800654A3E /* swiftNodeConnectionPractice */,
 				05922798245F964800654A3E /* Products */,
 				380D96C221946B94A37A41EA /* Pods */,
@@ -68,11 +69,13 @@
 			children = (
 				0592279A245F964800654A3E /* AppDelegate.swift */,
 				0592279C245F964800654A3E /* SceneDelegate.swift */,
-				0592279E245F964800654A3E /* ViewController.swift */,
+				0592279E245F964800654A3E /* AjaxViewController.swift */,
+				058758732460F524004C956E /* WebSocketViewController.swift */,
 				059227A0245F964800654A3E /* Main.storyboard */,
 				059227A3245F964900654A3E /* Assets.xcassets */,
 				059227A5245F964900654A3E /* LaunchScreen.storyboard */,
 				059227A8245F964900654A3E /* Info.plist */,
+				05ED382E2460EA42008F1C67 /* ServerSide */,
 			);
 			path = swiftNodeConnectionPractice;
 			sourceTree = "<group>";
@@ -210,8 +213,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0592279F245F964800654A3E /* ViewController.swift in Sources */,
+				0592279F245F964800654A3E /* AjaxViewController.swift in Sources */,
 				0592279B245F964800654A3E /* AppDelegate.swift in Sources */,
+				058758742460F524004C956E /* WebSocketViewController.swift in Sources */,
 				0592279D245F964800654A3E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
