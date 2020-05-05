@@ -5,6 +5,7 @@
  - Ajaxサーバーからログを受信する(画面１)
  - WebSocketからログを受信する(画面２)
 
+<img src="assets/ajaxMovie.gif" width="300px"> <img src="assets/websocketStart.gif" width="300px">
 
 ### SwiftとNode.jsでアプリとサーバーの通信を表現します
 
@@ -27,3 +28,5 @@
 
 サーバーを立ち上げ、接続をするとuptimeが更新されていくのが分かります。
 uptimeはサーバーの起動時間を表すので、適切に通信ができていることが分かりますね。
+
+<img src="assets/websocketStart.gif" width="300px">
