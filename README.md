@@ -1,11 +1,11 @@
 ## アプリとサーバーの通信の練習をします
-ログイン処理のところは未実装…
+(ログイン部分はまだサーバーとの通信)
 #### アプリ体験
  - UserDefaultsを使ったログイン画面でログイン(ユーザ登録も)
  - Ajaxサーバーからログを受信する(画面１)
  - WebSocketからログを受信する(画面２)
 
-<img src="assets/ajaxMovie.gif" width="300px"> <img src="assets/websocketStart.gif" width="300px">
+<img src="assets/registerLogin.gif" width="300px"> <img src="assets/ajaxMovie.gif" width="300px"> <img src="assets/websocketStart.gif" width="300px">
 
 ### SwiftとNode.jsでアプリとサーバーの通信を表現します
 

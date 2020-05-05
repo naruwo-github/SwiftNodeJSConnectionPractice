@@ -54,6 +54,15 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="NI7-d0-zdQ">
+                                        <rect key="frame" x="30" y="252" width="215" height="119.5"/>
+                                        <string key="text">Welcome to App!!
+Please sign in and press "Register" button.
+(One or more charactor is needed respectively.)</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pF-bR-e23">
                                         <rect key="frame" x="30" y="387" width="215" height="50"/>
                                         <color key="backgroundColor" red="0.4823529412" green="0.78039215689999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -69,20 +78,25 @@
                                                 <integer key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="registerLoginButtonTapped:" destination="9wA-kD-TRu" eventType="touchUpInside" id="4mo-AV-mYN"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="NI7-d0-zdQ">
-                                        <rect key="frame" x="30" y="252" width="215" height="72"/>
-                                        <string key="text">Welcome to App!!
-Please sign in and press "Register" button.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdU-zc-9h5" userLabel="Reset Button">
+                                        <rect key="frame" x="122.5" y="437" width="30" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetButton:" destination="9wA-kD-TRu" eventType="touchUpInside" id="6um-BE-iXU"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.83529411760000005" green="0.92941176469999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="XdU-zc-9h5" firstAttribute="bottom" secondItem="OQ6-7t-JEs" secondAttribute="bottom" id="4yF-ru-mYz"/>
                                     <constraint firstItem="r7q-Wb-41S" firstAttribute="leading" secondItem="OQ6-7t-JEs" secondAttribute="leading" constant="30" id="7Nc-NC-1Q7"/>
                                     <constraint firstItem="YIR-8M-FW5" firstAttribute="leading" secondItem="OQ6-7t-JEs" secondAttribute="leading" constant="30" id="7ew-sQ-gQP"/>
+                                    <constraint firstItem="XdU-zc-9h5" firstAttribute="centerX" secondItem="OQ6-7t-JEs" secondAttribute="centerX" id="8Tv-0s-8f7"/>
                                     <constraint firstItem="NI7-d0-zdQ" firstAttribute="top" secondItem="eTc-Kd-4zx" secondAttribute="bottom" constant="30" id="D8z-Lt-rio"/>
                                     <constraint firstItem="YIR-8M-FW5" firstAttribute="centerX" secondItem="OQ6-7t-JEs" secondAttribute="centerX" id="DxE-wZ-X6B"/>
                                     <constraint firstItem="jEc-xI-XxK" firstAttribute="leading" secondItem="OQ6-7t-JEs" secondAttribute="leading" constant="30" id="EHM-EA-5SB"/>
@@ -92,11 +106,12 @@ Please sign in and press "Register" button.</string>
                                     <constraint firstItem="eTc-Kd-4zx" firstAttribute="top" secondItem="UQq-m1-tYP" secondAttribute="bottom" constant="30" id="MG9-6x-tba"/>
                                     <constraint firstItem="Mze-dV-6Pt" firstAttribute="centerX" secondItem="OQ6-7t-JEs" secondAttribute="centerX" id="MbZ-8N-J52"/>
                                     <constraint firstItem="YIR-8M-FW5" firstAttribute="top" secondItem="Mze-dV-6Pt" secondAttribute="bottom" id="PBL-Kw-P9X"/>
-                                    <constraint firstItem="2pF-bR-e23" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NI7-d0-zdQ" secondAttribute="bottom" constant="30" id="SFT-GM-eYl"/>
+                                    <constraint firstItem="2pF-bR-e23" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NI7-d0-zdQ" secondAttribute="bottom" constant="10" id="SFT-GM-eYl"/>
                                     <constraint firstAttribute="bottom" secondItem="2pF-bR-e23" secondAttribute="bottom" constant="30" id="Vfz-SL-15o"/>
                                     <constraint firstItem="jEc-xI-XxK" firstAttribute="centerX" secondItem="OQ6-7t-JEs" secondAttribute="centerX" id="YQr-ja-ZDu"/>
                                     <constraint firstItem="2pF-bR-e23" firstAttribute="leading" secondItem="OQ6-7t-JEs" secondAttribute="leading" constant="30" id="Z6J-nf-TC5"/>
                                     <constraint firstItem="eTc-Kd-4zx" firstAttribute="top" secondItem="r7q-Wb-41S" secondAttribute="bottom" id="bbg-3m-scB"/>
+                                    <constraint firstItem="2pF-bR-e23" firstAttribute="bottom" secondItem="XdU-zc-9h5" secondAttribute="top" id="dEn-HU-fHM"/>
                                     <constraint firstItem="UQq-m1-tYP" firstAttribute="top" secondItem="jEc-xI-XxK" secondAttribute="bottom" id="dMg-Tf-QeR"/>
                                     <constraint firstItem="NI7-d0-zdQ" firstAttribute="centerX" secondItem="OQ6-7t-JEs" secondAttribute="centerX" id="ich-kV-Sry"/>
                                     <constraint firstItem="2pF-bR-e23" firstAttribute="centerX" secondItem="OQ6-7t-JEs" secondAttribute="centerX" id="mlh-lk-R0p"/>
@@ -110,6 +125,11 @@ Please sign in and press "Register" button.</string>
                                     <constraint firstItem="eTc-Kd-4zx" firstAttribute="centerX" secondItem="OQ6-7t-JEs" secondAttribute="centerX" id="yqg-4I-hmy"/>
                                     <constraint firstItem="r7q-Wb-41S" firstAttribute="centerX" secondItem="OQ6-7t-JEs" secondAttribute="centerX" id="zQq-vb-EUs"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -121,21 +141,29 @@ Please sign in and press "Register" button.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gVW-jC-ayU"/>
                     </view>
+                    <connections>
+                        <outlet property="idTextField" destination="YIR-8M-FW5" id="WA7-qb-pck"/>
+                        <outlet property="passwordAgainAboveLabel" destination="r7q-Wb-41S" id="Wqa-8a-Oai"/>
+                        <outlet property="passwordAgainTextField" destination="eTc-Kd-4zx" id="DC3-v6-7dr"/>
+                        <outlet property="passwordTextField" destination="UQq-m1-tYP" id="UTU-vt-wwS"/>
+                        <outlet property="registerLoginButton" destination="2pF-bR-e23" id="jHx-jq-Muf"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToAjaxVC" id="dHl-YD-g9V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eth-Hg-h2X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="-612"/>
+            <point key="canvasLocation" x="138" y="-594"/>
         </scene>
         <!--Ajax View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AjaxViewController" customModule="swiftNodeConnectionPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAA-Lb-l7d">
-                                <rect key="frame" x="100" y="517" width="175" height="50"/>
+                                <rect key="frame" x="100" y="497" width="175" height="50"/>
                                 <color key="backgroundColor" red="0.4823529412" green="0.78039215689999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="iVI-uD-MWq"/>
@@ -154,7 +182,7 @@ Please sign in and press "Register" button.</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7o2-Q6-bnG">
-                                <rect key="frame" x="20" y="317" width="335" height="180"/>
+                                <rect key="frame" x="20" y="297" width="335" height="180"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Platform : before connecting..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Y08-bt-hhc" userLabel="PlatformLabel">
                                         <rect key="frame" x="5" y="0.0" width="325" height="60"/>
@@ -204,7 +232,7 @@ Please sign in and press "Register" button.</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajax(Server)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="bBx-ZM-Gii">
-                                <rect key="frame" x="100" y="237" width="175" height="50"/>
+                                <rect key="frame" x="100" y="217" width="175" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="QX9-SZ-xgd"/>
@@ -219,7 +247,7 @@ Please sign in and press "Register" button.</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiM-9H-DIQ">
-                                <rect key="frame" x="100" y="587" width="175" height="50"/>
+                                <rect key="frame" x="100" y="567" width="175" height="50"/>
                                 <color key="backgroundColor" red="0.4823529412" green="0.78039215689999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ZQy-xl-UaR"/>
@@ -256,6 +284,7 @@ Please sign in and press "Register" button.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="lT5-8z-jOn"/>
                     <connections>
                         <outlet property="connectButton" destination="fAA-Lb-l7d" id="g56-k6-kMy"/>
                         <outlet property="nodeVersionLabel" destination="tAj-xh-JKp" id="dGa-pF-ojM"/>
