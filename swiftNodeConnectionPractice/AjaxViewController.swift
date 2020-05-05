@@ -41,6 +41,16 @@ class AjaxViewController: UIViewController {
         timer.resume()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        if self.connectButton.titleLabel?.text == "Connecting" {
+            self.connectButton.setTitle("Connect", for: UIControl.State.normal)
+            //一時停止
+            timer.suspend()
+        }
+    }
+    
     @IBAction func connectButtonTapped(_ sender: Any) {
         if self.connectButton.titleLabel?.text == "Connecting" {
             self.connectButton.setTitle("Connect", for: UIControl.State.normal)

@@ -141,7 +141,7 @@
         <!--Web Socket View Controller-->
         <scene sceneID="aSL-jg-X4f">
             <objects>
-                <viewController id="FJr-Lu-KiM" customClass="WebSocketViewController" customModule="swiftNodeConnectionPractice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="FJr-Lu-KiM" customClass="WebSocketViewController" customModule="swiftNodeConnectionPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hrD-rV-yH5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,6 +176,9 @@
                                         <integer key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapButtonPressed:" destination="FJr-Lu-KiM" eventType="touchUpInside" id="4zL-AT-cYj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpN-cj-t5b">
                                 <rect key="frame" x="100" y="688" width="214" height="50"/>
@@ -192,6 +195,9 @@
                                         <integer key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="connectButtonPressed:" destination="FJr-Lu-KiM" eventType="touchUpInside" id="b39-00-bJj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bb-Gg-ozQ">
                                 <rect key="frame" x="100" y="758" width="214" height="50"/>
@@ -208,6 +214,9 @@
                                         <integer key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="disconnectButtonPressed:" destination="FJr-Lu-KiM" eventType="touchUpInside" id="MQY-B1-Pu3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -233,6 +242,9 @@
                         <viewLayoutGuide key="safeArea" id="ybY-ac-w9A"/>
                     </view>
                     <navigationItem key="navigationItem" id="TG9-Xd-kBI"/>
+                    <connections>
+                        <outlet property="logTableView" destination="11n-ls-ZUJ" id="obi-pI-gWK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ptC-pC-2Qc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
