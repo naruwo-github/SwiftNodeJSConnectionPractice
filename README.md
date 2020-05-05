@@ -1,5 +1,6 @@
-## アプリとサーバーの通信の練習をします
+## アプリとサーバーの通信(ログインも？)の練習をします
 (ログイン部分はまだサーバーとの通信)
+
 #### アプリ体験
  - UserDefaultsを使ったログイン画面でログイン(ユーザ登録も)
  - Ajaxサーバーからログを受信する(画面１)
@@ -10,23 +11,28 @@
 ### SwiftとNode.jsでアプリとサーバーの通信を表現します
 
 ### 使用するフレームワーク
+(画面１)
  - Ajax
  - SwiftyJSON
  - Alamofire
 
-### やり方
-①JSONを提供するサーバーをJavaScriptで作成する
+(画面2)
+ - SocketIO
 
-②SwiftでiOSアプリを作成する
+### プロジェクト詳細
+ - サーバーをJavaScriptで作成し、JSONまたは単純にログを送信する
+ - SwiftでiOSアプリを作成し、サーバーからデータを受け取って表示する
 
-③```node ファイル名.js``` コマンドでローカルにサーバーを立ち上げる
+#### 動かし方
+①アプリを起動する
 
-④アプリ側でそのサーバーのURLにアクセスし、JSONを受け取る
-(AlamofireはサーバーURLにアクセスするとき、SwiftyJSONはJSONファイルを受け取った後の処理に使うと思ってる)
+②```node ファイル名.js``` コマンドでローカルにサーバーを立ち上げる
 
+③アプリ内でサーバーと接続するボタンを押下する
+→画面が更新されていればオッケーです。
+
+### Ajaxの方
 <img src="assets/ajaxOpenning.png" width="300px"> <img src="assets/ajaxMovie.gif" width="300px">
 
-サーバーを立ち上げ、接続をするとuptimeが更新されていくのが分かります。
-uptimeはサーバーの起動時間を表すので、適切に通信ができていることが分かりますね。
-
+### Socketの方
 <img src="assets/websocketStart.gif" width="300px">
