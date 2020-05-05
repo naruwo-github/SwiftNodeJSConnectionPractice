@@ -8,5 +8,6 @@ target 'swiftNodeConnectionPractice' do
   # Pods for swiftNodeConnectionPractice
   pod "Alamofire"
   pod "SwiftyJSON"
+  pod "Socket.IO-Client-Swift", "~> 15.2.0"
 
 end
