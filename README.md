@@ -1,22 +1,22 @@
 ## アプリとサーバーの通信と、ログインの練習をします
-(ログイン部分はまだサーバーとの通信してません。端末内に保存し)
+(ログイン部分はまだサーバーとの通信してません。端末内に保存します。)
 
 #### アプリ体験
  - UserDefaultsを使ったログイン画面でログイン(ユーザ登録も)
- - Ajaxサーバーからログを受信する(画面１)
- - WebSocketからログを受信する(画面２)
+ - Ajaxサーバーからログを受信する(Ajax画面)
+ - WebSocketからログを受信する(WebSocket画面)
 
 <img src="assets/registerLogin.gif" width="300px"> <img src="assets/ajaxMovie.gif" width="300px"> <img src="assets/websocketStart.gif" width="300px">
 
 ### SwiftとNode.jsでアプリとサーバーの通信を表現します
 
 ### 使用するフレームワーク
-(画面１)
+(Ajax画面)
  - Ajax
  - SwiftyJSON
  - Alamofire
 
-(画面2)
+(WebSocket画面)
  - SocketIO
 
 ### プロジェクト詳細
